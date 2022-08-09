@@ -6,7 +6,40 @@
 #    By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 11:35:43 by diserran          #+#    #+#              #
-#    Updated: 2022/08/08 11:35:46 by diserran         ###   ########.fr        #
+#    Updated: 2022/08/09 21:28:41 by diserran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+SRCS =	ft_printf.c \
+		ft_putchar.c \
+		ft_putstr.c \
+		ft_putnbr.c
+
+NAME = libftprintf.a
+
+OBJS_DIR = objs/
+OBJS = $(SRCS:.c=.o)
+OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
+
+CC = clang
+
+CC_FLAGS = -Wall -Wextra -Werror
+
+$(OBJS_DIR)%.o : %.c ft_printf.h
+	@mkdir -p $(OBJS_DIR)
+	@echo "Compiling: $<"
+	@clang $(CC_FLAGS) -c $< -o $@
+
+$(NAME): $(OBJECTS_PREFIXED)
+	@ar r $(NAME) $(OBJECTS_PREFIXED)
+	@echo "Printf Done !"
+
+all: $(NAME)
+
+clean:
+	rm -rf $(OBJS_DIR)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all

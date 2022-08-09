@@ -53,3 +53,6 @@ dkms.conf
 
 .vscode
 .gitignore
+printfTester
+ft_printf_tester
+objs
