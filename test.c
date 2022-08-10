@@ -6,38 +6,54 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 13:13:14 by diserran          #+#    #+#             */
-/*   Updated: 2022/08/08 13:15:49 by diserran         ###   ########.fr       */
+/*   Updated: 2022/08/10 13:18:36 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+ * C program to Convert Decimal to Hexadecimal
+ */
+
 #include <stdio.h>
-#include <stdarg.h>
 
-void simple_printf(const char* fmt, ...)
+/* int main()
 {
-    va_list args;
-    va_start(args, fmt);
 
-    while (*fmt != '\0') {
-        if (*fmt == 'd') {
-            int i = va_arg(args, int);
-            printf("%d\n", i);
-        } else if (*fmt == 'c') {
-            // A 'char' variable will be promoted to 'int'
-            // A character literal in C is already 'int' by itself
-            int c = va_arg(args, int);
-            printf("%c\n", c);
-        } else if (*fmt == 'f') {
-            double d = va_arg(args, double);
-            printf("%f\n", d);
-        }
-        ++fmt;
-    }
+	long decimalnum, quotient, remainder;
+	int i, j = 0;
+	char hexadecimalnum[100];
 
-    va_end(args);
-}
+	printf("Enter decimal number: ");
+	scanf("%ld", &decimalnum);
+	quotient = decimalnum;
+	while (quotient != 0)
+	{
+		remainder = quotient % 16;
+		if (remainder < 10)
+			hexadecimalnum[j++] = 48 + remainder;
+		else
+			hexadecimalnum[j++] = 55 + remainder;
+		quotient = quotient / 16;
+	}
 
-int main(void)
+	// display integer into character
+	for (i = j; i >= 0; i--)
+		printf("%c", hexadecimalnum[i]);
+	return 0;
+} */
+
+int	main(void)
 {
-    simple_printf("%d%c%f%f", 3, 'a', 1.999, 42.5);
+	printf("PRIMERA VUELTA\n");
+	printf("Cociente: %d\n", 800 / 16);
+	printf("Resto: %d", 800 % 16);
+
+	printf("\nDIVIDIMOS EL COCIENTE (50)\n");
+	printf("Cociente: %d\n", 50 / 16);
+	printf("Resto: %d", 50 % 16);
+
+	printf("\nDIVIDIMOS EL COCIENTE (3)\n");
+	printf("Cociente: %d\n", 3 / 16);
+	printf("Resto: %d", 3 % 16);
+	return (0);
 }

@@ -6,14 +6,16 @@
 #    By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 11:35:43 by diserran          #+#    #+#              #
-#    Updated: 2022/08/09 21:28:41 by diserran         ###   ########.fr        #
+#    Updated: 2022/08/10 11:11:49 by diserran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =	ft_printf.c \
 		ft_putchar.c \
 		ft_putstr.c \
-		ft_putnbr.c
+		ft_putnbr.c \
+		ft_putunsnbr.c \
+		ft_puthexa.c
 
 NAME = libftprintf.a
 
