@@ -6,7 +6,7 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 11:26:25 by diserran          #+#    #+#             */
-/*   Updated: 2022/08/09 21:22:40 by diserran         ###   ########.fr       */
+/*   Updated: 2022/08/10 13:12:46 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@
 # include <stdarg.h>
 
 int		ft_printf(char const *str, ...);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	ft_putnbr(int nb);
+int		ft_putchar(char c);
+int		ft_putstr(char *str);
+int		ft_putnbr(int nb);
+int		ft_putunsnbr(unsigned int nb);
+int		ft_puthexa(int nb);
 
 #endif

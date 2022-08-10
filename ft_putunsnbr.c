@@ -1,19 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putunsnbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 13:28:20 by diserran          #+#    #+#             */
-/*   Updated: 2022/08/10 08:18:06 by diserran         ###   ########.fr       */
+/*   Created: 2022/08/10 10:59:58 by diserran          #+#    #+#             */
+/*   Updated: 2022/08/10 11:11:22 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+static void	ft_convert_number(long zbk)
 {
-	write(1, &c, 1);
-	return (1);
+	if (zbk > 9)
+	{
+		ft_putnbr(zbk / 10);
+		ft_putchar(zbk % 10 + '0');
+	}
+	else
+		ft_putchar(zbk + '0');
+}
+
+static int	ft_count_number(unsigned int i)
+{
+	int	len;
+
+	len = 0;
+	if (i == 0)
+		len++;
+	while (i != 0)
+	{
+		i = i / 10;
+		len++;
+	}
+	return (len);
+}
+
+int	ft_putunsnbr(unsigned int nb)
+{
+	long	zbk;
+
+	zbk = nb;
+	ft_convert_number(zbk);
+	return (ft_count_number(nb));
 }
