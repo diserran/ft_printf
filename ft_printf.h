@@ -6,7 +6,7 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 11:26:25 by diserran          #+#    #+#             */
-/*   Updated: 2022/08/10 13:12:46 by diserran         ###   ########.fr       */
+/*   Updated: 2022/08/11 11:39:47 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int		ft_putchar(char c);
 int		ft_putstr(char *str);
 int		ft_putnbr(int nb);
 int		ft_putunsnbr(unsigned int nb);
-int		ft_puthexa(int nb);
+int		ft_puthexa(unsigned long int nb, char flag);
 
 #endif
