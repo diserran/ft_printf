@@ -6,7 +6,7 @@
 #    By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 11:35:43 by diserran          #+#    #+#              #
-#    Updated: 2022/08/10 11:11:49 by diserran         ###   ########.fr        #
+#    Updated: 2022/08/12 09:16:12 by diserran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(OBJS_DIR)%.o : %.c ft_printf.h
 	@clang $(CC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJECTS_PREFIXED)
-	@ar r $(NAME) $(OBJECTS_PREFIXED)
+	@ar rcs $(NAME) $(OBJECTS_PREFIXED)
 	@echo "Printf Done !"
 
 all: $(NAME)
