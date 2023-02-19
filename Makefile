@@ -6,7 +6,7 @@
 #    By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/08 11:35:43 by diserran          #+#    #+#              #
-#    Updated: 2022/08/12 09:16:12 by diserran         ###   ########.fr        #
+#    Updated: 2023/02/19 17:56:54 by diserran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRCS =	ft_printf.c \
 
 NAME = libftprintf.a
 
-OBJS_DIR = objs/
+OBJS_DIR = src/objs/
 OBJS = $(SRCS:.c=.o)
 OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
 

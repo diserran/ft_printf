@@ -6,11 +6,11 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 12:03:22 by diserran          #+#    #+#             */
-/*   Updated: 2022/08/11 21:46:51 by diserran         ###   ########.fr       */
+/*   Updated: 2023/02/19 17:46:24 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 static int	ft_printf_flags(va_list args, char const flag)
 {
