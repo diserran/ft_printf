@@ -6,11 +6,11 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 11:10:28 by diserran          #+#    #+#             */
-/*   Updated: 2022/08/11 11:39:42 by diserran         ###   ########.fr       */
+/*   Updated: 2023/02/19 18:19:15 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	ft_puthexa(unsigned long int nb, char flag)
 {

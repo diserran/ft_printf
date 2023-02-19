@@ -6,11 +6,11 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 13:28:20 by diserran          #+#    #+#             */
-/*   Updated: 2022/08/10 08:18:06 by diserran         ###   ########.fr       */
+/*   Updated: 2023/02/19 18:19:09 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	ft_putchar(char c)
 {

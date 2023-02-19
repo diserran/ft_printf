@@ -6,11 +6,11 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 10:59:58 by diserran          #+#    #+#             */
-/*   Updated: 2022/08/10 11:11:22 by diserran         ###   ########.fr       */
+/*   Updated: 2023/02/19 18:19:23 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 static void	ft_convert_number(long zbk)
 {

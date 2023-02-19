@@ -1,47 +1,36 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/08/08 11:35:43 by diserran          #+#    #+#              #
-#    Updated: 2023/02/19 17:56:54 by diserran         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-SRCS =	ft_printf.c \
-		ft_putchar.c \
-		ft_putstr.c \
-		ft_putnbr.c \
-		ft_putunsnbr.c \
-		ft_puthexa.c
-
 NAME = libftprintf.a
 
-OBJS_DIR = src/objs/
-OBJS = $(SRCS:.c=.o)
-OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
+SRCS = src/ft_printf.c \
+       src/ft_putchar.c \
+	   src/ft_puthexa.c \
+	   src/ft_putnbr.c \
+	   src/ft_putstr.c \
+	   src/ft_putunsnbr.c 
 
-CC = clang
+OBJS = $(SRCS:src/%.c=obj/%.o)
 
-CC_FLAGS = -Wall -Wextra -Werror
-
-$(OBJS_DIR)%.o : %.c ft_printf.h
-	@mkdir -p $(OBJS_DIR)
-	@echo "Compiling: $<"
-	@clang $(CC_FLAGS) -c $< -o $@
-
-$(NAME): $(OBJECTS_PREFIXED)
-	@ar rcs $(NAME) $(OBJECTS_PREFIXED)
-	@echo "Printf Done !"
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
+	@echo "Printf Done !"
+
+obj/%.o: src/%.c | obj
+	@echo "Compiling: $<"
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+obj:
+	@mkdir obj
+
 clean:
-	rm -rf $(OBJS_DIR)
+	rm -rf obj
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
